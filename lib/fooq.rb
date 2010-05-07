@@ -53,8 +53,9 @@ end
 
 def run
   dir = STemp.mkdtemp("/tmp/fooq-XXX")
+  content = split(read)
   FileUtils.cd(dir)
-  write_source(split(read))
+  write_source(content)
   build_and_run(dir)
   FileUtils.rm_r(dir)
 end
