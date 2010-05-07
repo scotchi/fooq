@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+# Copyright (C) 2009 Scott Wheeler <wheeler@kde.org> | MIT License
+
+require 'rubygems'
+require 'fooq'
+
+run
