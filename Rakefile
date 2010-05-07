@@ -5,12 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "fooq"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "scott@directededge.com"
-    gem.homepage = "http://github.com/directededge/fooq"
+    gem.summary = %Q{Tool to run simple Qt / C++ "scripts"}
+    gem.description = %Q{Tool to run simple Qt / C++ "scripts" without needing to create a Makefile, main function, etc.}
+    gem.email = "wheeler@kde.org"
+    gem.homepage = "http://github.com/scotchi/fooq"
     gem.authors = ["Scott Wheeler"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_dependency "ruby-stemp", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
