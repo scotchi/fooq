@@ -1,16 +1,35 @@
 = fooq
 
-Description goes here.
+fooq lets you run Qt / C++ code as if it was a script.  You can use, for example:
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+  #!/usr/bin/fooq
+
+  qDebug() << "fooq!";
+
+And it will create a temp directory, build and run the script already including and linking
+to QtCore.  You can also run it directly on the command line:
+
+  $ fooq
+  qDebug() << "fooq!";
+  ^D
+  "fooq!"
+  $
+
+It automagically picks up on previously declared functions, classes, structs, includes
+and whatnot and won't munge them into your main method.  So this works fine:
+
+  #!/usr/bin/fooq
+
+  static void foo()
+  {
+    qDebug() << "fooq!";
+  }
+
+  foo();
+
+I found myself creating a lot of one-off 5 line projects to test things, and this
+has saved me a good deal of time in testing C++ one-liners or doing quick processing
+tasts that Qt is well suited to.
 
 == Copyright
 
