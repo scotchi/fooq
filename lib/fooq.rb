@@ -22,6 +22,7 @@ def split(content)
       split_point = i + 1 if brace_level == 0
     end
   end
+  split_point += 1 if content[split_point, 1] == ';'
   return {
     :head => content[0, split_point],
     :body => content[split_point, content.size - split_point]
